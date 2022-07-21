@@ -24,10 +24,18 @@ const ButtonTextColor = {
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   width: 100px;
   height: 40px;
-  ${props => {
+  border: 0px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+
+  background-color: ${props => props.theme.primary};
+  color: ${props => props.theme.tertiary};
+
+  /* ${props => {
     return css`
       background-color: ${buttonVariants[props.variant]};
       color: ${ButtonTextColor[props.textColor]};
     `
-  }}
-`;
+  }}*/
+`
