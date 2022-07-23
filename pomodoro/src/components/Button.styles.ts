@@ -1,11 +1,9 @@
 import styled, { css } from "styled-components";
 
 export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'success';
-export type ButtonTextColor = 'white' | 'black' | 'grey';
 
 interface ButtonContainerProps {
   variant: ButtonVariant;
-  textColor: ButtonTextColor;
 }
 
 const buttonVariants = {
@@ -13,12 +11,6 @@ const buttonVariants = {
   secondary: 'orange',
   danger: 'red',
   success: 'green'
-}
-
-const ButtonTextColor = {
-  white: '#fff',
-  black: '#000',
-  grey: '#ccc'
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
@@ -29,13 +21,12 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   margin: 5px;
   cursor: pointer;
 
-  background-color: ${props => props.theme.primary};
-  color: ${props => props.theme.tertiary};
+  background-color: ${props => props.theme["green-500"]};
+  color: ${props => props.theme.primary};
 
   /* ${props => {
     return css`
       background-color: ${buttonVariants[props.variant]};
-      color: ${ButtonTextColor[props.textColor]};
     `
   }}*/
 `

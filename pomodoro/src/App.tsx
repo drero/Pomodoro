@@ -7,9 +7,9 @@ import { defaultTheme } from './styles/themes/default';
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Button variant="primary" textColor='grey' />
-      <Button variant="secondary" textColor='white' />
-      <Button variant="success" textColor='black' />
+      <Button variant="primary" />
+      <Button variant="secondary" />
+      <Button variant="success" />
       <Button variant="danger" />
       <Button />
 
